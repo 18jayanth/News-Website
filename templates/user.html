@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Daily News</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='stylemain.css')}}"/>
+        <style>
+            body{
+                background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('header.jpg');
+                height: 100vh;
+                -webkit-background-size: cover;
+                background-size: cover;
+                background-position: center center;
+                position: relative;
+            }
+            .heading{
+                padding: 40px;
+                text-align: left;
+                justify-content: center;
+                font-size:30px;
+                color: #fff;
+            }
+            .btn{
+                font-family:Century Gothic;
+                font-size: 28px;
+                font-weight:bold;
+                background:transparent;
+                width:600px;
+                height:25px;
+                margin-top: 200px;
+                margin:auto;
+                display:flex;
+                justify-content:center;
+                padding-top:20px;
+                padding-bottom:25px;
+                text-align:center;
+                text-decoration:none;
+                text-transform:uppercase;
+                color:#fff;
+                border-radius:20px;
+                cursor:pointer;
+                box-shadow:2px 2px lightgrey;
+                -webkit-transition-duration:0.3s;
+                transition-duration:0.3s;
+                -webkit-transition-property:box-shadow, transform;
+            }
+            .btn:hover, .btn:focus, .btn:active{
+                background-color:#fff;
+                color:#333;
+                box-shadow:0 0 20px rgba(0,0,0,0.5);
+                -webkit-transform:scale(1.1);
+                transform:scale(1.1);
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="main">
+                <ul>
+                    <li><a href="{{url_for('index')}}">Logout</a></li>
+                </ul>
+            </div>
+            <div class="heading">
+                <h2>Hey...Here's your Daily News!</h2>
+            </div>
+            <div class="category">
+                <li><a href="{{url_for('sports')}}" class="btn">Sports</a></li><br>
+                <li><a href="{{url_for('business')}}" class="btn">Business</a></li><br>
+                <li><a href="{{url_for('technology')}}" class="btn">Technology</a></li><br>
+                <li><a href="{{url_for('science')}}" class="btn">Science</a></li><br>
+                <li><a href="{{url_for('health')}}" class="btn">Health</a></li><br>
+            </div>
+        </header>
+    </body>
+</html>
